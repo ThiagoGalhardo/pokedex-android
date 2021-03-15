@@ -1,0 +1,5 @@
+package com.thiagogalhardo.pokedex_android.domain
+
+data class PokemonType(
+    val name: String
+)
