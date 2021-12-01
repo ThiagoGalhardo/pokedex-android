@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#71FAFF</color>
+    <color name="colorPrimaryDark">#1BD0C9</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="numberPokemon">#212121</color>
     <color name="namePokemon">#313131</color>
     <color name="backgroundType">#a4acaf</color>
+
+
+    <color name="normalType">#BCBCAE</color>
+    <color name="poisonType">#A95EA1</color>
+    <color name="psychicType">#F462AD</color>
+    <color name="grassType">#8CD851</color>
+    <color name="groundType">#E4DAAC</color>
+    <color name="iceType">#95F1FE</color>
+    <color name="fireType">#FB5643</color>
+    <color name="rockType">#CFBD73</color>
+    <color name="dragonType">#8A74FA</color>
+    <color name="waterType">#55AEFE</color>
+    <color name="bugType">#C2D11E</color>
+    <color name="darkType">#8D6856</color>
+    <color name="fightingType">#A95340</color>
+    <color name="ghostType">#7874D2</color>
+    <color name="steelType">#FFFDFF</color>
+    <color name="flyingType">#79A3FF</color>
+    <color name="electricType">#FFE337</color>
+    <color name="fairyType">#F8ADFF</color>
+
 </resources>
+
