@@ -14,7 +14,6 @@ import com.thiagogalhardo.pokedex_android.viewmodel.PokemonViewModelFactory
 class MainActivity : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
 
-
     private val viewModel by lazy {
         ViewModelProvider(this, PokemonViewModelFactory())
             .get(PokemonViewModel::class.java)
@@ -29,8 +28,8 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.pokemons.observe(this, Observer {
             loadRecyclerView(it)
-        })
 
+        })
     }
 
     private fun loadRecyclerView(pokemons: List<Pokemon?>) {

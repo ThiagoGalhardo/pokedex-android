@@ -1,12 +1,14 @@
 package com.thiagogalhardo.pokedex_android.view
 
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.thiagogalhardo.pokedex_android.R
@@ -15,7 +17,6 @@ import kotlinx.android.synthetic.main.pokemon_item.view.*
 
 class PokemonAdapter(
     private val items: List<Pokemon?>
-
 ) : RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -53,6 +54,12 @@ class PokemonAdapter(
                     val context = itemView.context
                     var mIntent = Intent(context, PokemonDetails::class.java)
                     context.startActivity(mIntent)
+
+
+                    val bundle = Bundle()
+                    bundle.putInt("positionId", position)
+                    mIntent.putExtras(bundle)
+                    context.startActivity(mIntent)
                 }
             }
         }
@@ -71,89 +78,156 @@ class PokemonAdapter(
                 tvNumber.text = "Nº ${item.formattedNumber}"
                 tvName.text = item.name.capitalize()
                 tvType1.text = item.types[0].name
-                var backgroudCard = cv_pokemon
+                val backgroudCard = cv_pokemon
 
 
+                when (tvType1.text) {
 
-
-                if (tvType1.text.equals("normal")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.normalType))
+                    "normal" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.normalType
+                            )
+                        )
+                    }
+                    "poison" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.poisonType
+                            )
+                        )
+                    }
+                    "psychic" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.psychicType
+                            )
+                        )
+                    }
+                    "grass" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.grassType
+                            )
+                        )
+                    }
+                    "ground" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.groundType
+                            )
+                        )
+                    }
+                    "ice" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.iceType
+                            )
+                        )
+                    }
+                    "fire" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.fireType
+                            )
+                        )
+                    }
+                    "rock" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.rockType
+                            )
+                        )
+                    }
+                    "dragon" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.dragonType
+                            )
+                        )
+                    }
+                    "water" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.waterType
+                            )
+                        )
+                    }
+                    "bug" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.bugType
+                            )
+                        )
+                    }
+                    "dark" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.darkType
+                            )
+                        )
+                    }
+                    "fighting" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.fightingType
+                            )
+                        )
+                    }
+                    "ghost" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.ghostType
+                            )
+                        )
+                    }
+                    "steel" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.steelType
+                            )
+                        )
+                    }
+                    "flying" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.flyingType
+                            )
+                        )
+                    }
+                    "electric" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.electricType
+                            )
+                        )
+                    }
+                    "fairy" -> {
+                        backgroudCard.setCardBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.fairyType
+                            )
+                        )
+                    }
                 }
-                if (tvType1.text.equals("poison")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.poisonType))
-                }
-
-                if (tvType1.text.equals("psychic")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.psychicType))
-                }
-
-                if (tvType1.text.equals("grass")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.grassType))
-                }
-
-                if (tvType1.text.equals("ground")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.groundType))
-                }
-
-                if (tvType1.text.equals("ice")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.iceType))
-                }
-
-                if (tvType1.text.equals("fire")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.fireType))
-                }
-
-                if (tvType1.text.equals("rock")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.rockType))
-                }
-
-                if (tvType1.text.equals("dragon")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.dragonType))
-                }
-
-                if (tvType1.text.equals("water")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.waterType))
-                }
-
-
-                if (tvType1.text.equals("bug")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.bugType))
-                }
-
-
-                if (tvType1.text.equals("dark")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.darkType))
-                }
-
-                if (tvType1.text.equals("fighting")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.fightingType))
-                }
-
-                if (tvType1.text.equals("ghost")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.ghostType))
-                }
-
-                if (tvType1.text.equals("steel")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.steelType))
-                }
-
-                if (tvType1.text.equals("flying")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.flyingType))
-                }
-
-                if (tvType1.text.equals("electric")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.electricType))
-                }
-
-                if (tvType1.text.equals("fairy")) {
-                    backgroudCard.setCardBackgroundColor(resources.getColor(R.color.fairyType))
-                }
-
-
-
-
-
-
 
 
                 if (item.types.size > 1) {
