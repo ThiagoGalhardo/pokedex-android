@@ -1,4 +1,4 @@
-<p align="center">Esse projeto..>
+<p align="center">Esse projeto..
  <p align="center">
  <a href="#desafio">Desafio</a> •
  <a href="#screenshot">Screenshot</a> •
