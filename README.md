@@ -14,4 +14,4 @@
 
 <br>
 
-<p align="center">:construction_worker: Projeto README :rocket: Em construção :construction:</p>
+<p align="center">:construction: Projeto README :rocket: Em construção :construction:</p>
